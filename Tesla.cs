@@ -1,11 +1,17 @@
 using System;
-using System.Collections.Generic;
 
 namespace Garage
 {
-    public class Tesla : Vehicle
+    public class Tesla : Vehicle, IElectricVehicle
     {
         public double BatteryKWh { get; set; }
+
+        public int CurrentChargePercentage { get; set; } = 44;
+
+        public void ChargeBattery()
+        {
+            CurrentChargePercentage = 100;
+        }
 
         public override void Turn()
         {
@@ -16,11 +22,6 @@ namespace Garage
         {
             Console.WriteLine($"The {Make} {Name} silently glides to a stop.");
             Console.WriteLine("");
-        }
-
-        public void ChargeBattery()
-        {
-            // method definition omitted
         }
     }
 }
