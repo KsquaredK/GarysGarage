@@ -6,14 +6,29 @@ namespace Garage
     {
         public double BatteryKWh { get; set; }
 
-        public override void Drive()
+        public override void Turn()
         {
-            Console.WriteLine("--f--f--f--f--f--f--f--f--f--f--f--f--f--f--f--f!");
+            Console.WriteLine("It nearly hits the pavement while banking a hard right.");
         }
-
         public void ChargeBattery()
         {
             // method definition omitted
         }
     }
 }
+
+
+// namespace Garage
+// {
+//     public class Zero  // Electric motorcycle
+//     {
+//         public double BatteryKWh { get; set; }
+//         public string MainColor { get; set; }
+//         public int MaximumOccupancy { get; set; }
+
+//         public void ChargeBattery()
+//         {
+//             // method definition omitted
+//         }
+//     }
+// }

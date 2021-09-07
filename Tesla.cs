@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Garage
 {
@@ -6,9 +7,15 @@ namespace Garage
     {
         public double BatteryKWh { get; set; }
 
-        public override void Drive()
+        public override void Turn()
         {
-            Console.WriteLine("ssssshhh!");
+            Console.WriteLine("It makes a neat right-hand turn.");
+        }
+
+        public override void Stop()
+        {
+            Console.WriteLine($"The {Make} {Name} silently glides to a stop.");
+            Console.WriteLine("");
         }
 
         public void ChargeBattery()
@@ -18,3 +25,20 @@ namespace Garage
     }
 }
 
+  
+
+
+// namespace Garage
+// {
+//     public class Tesla  // Electric car
+//     {
+//         public double BatteryKWh { get; set; }
+//         public string MainColor { get; set; }
+//         public int MaximumOccupancy { get; set; }
+
+//         public void ChargeBattery()
+//         {
+//             // method definition omitted
+//         }
+//     }
+// } 
