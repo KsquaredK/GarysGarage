@@ -8,11 +8,11 @@ namespace Garage
         static void Main(string[] args) 
 
         {
-            Zero fxs = new Zero();
+            Zero fxs = new Zero() {Name = "fxs", CurrentChargePercentage = 12};
             // {MainColor = "Midnight Blue", Name = "FXs", Make = "Zero", Verb = "zips", Sound = "f-f-f-f-f-f-f-f-f-f-f-sh!"}
-            Zero fx = new Zero() ;
+            Zero fx = new Zero() {Name = "fx", CurrentChargePercentage = 77} ;
             // {MainColor = "Black", Name = "FX", Make = "Zero", Verb = "zips", Sound = "f-f-f-f-f-f-f-f-f-f-f-sh!"};
-            Tesla modelS = new Tesla(); 
+            Tesla modelS = new Tesla() {Name = "modelS", CurrentChargePercentage = 36}; 
             // {MainColor = "Burgundy", Name = "modelS", Make = "Tesla", Verb = "blazes", Sound =  "=>=>=>=>=>!"};
 
             List<IElectricVehicle> electricVehicles = new List<IElectricVehicle>() {fx, fxs, modelS};
@@ -21,7 +21,7 @@ namespace Garage
 
             foreach(IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}");
+                Console.WriteLine($"Your {ev} is at {ev.CurrentChargePercentage}%.");
                 Console.WriteLine("Let's charge it up!");
             }
 
@@ -34,12 +34,12 @@ namespace Garage
                 Console.WriteLine("....");
                 Console.WriteLine("..");
                 Console.WriteLine(".");
-                Console.WriteLine("All done!");
+                Console.WriteLine("All done! Let's print out the levels:");
             }
 
             foreach(IElectricVehicle ev in electricVehicles)
             {
-                Console.WriteLine($"{ev.CurrentChargePercentage}%");
+                Console.WriteLine($"{ev}: {ev.CurrentChargePercentage}%");
             }
         } 
     }
